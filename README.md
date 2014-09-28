@@ -51,7 +51,7 @@ $ slack channels history C1234567
 With `jq`, you can do things like
 
 ```text
-$ slack users list | jq '.members | map((.id): .name)'
+$ slack users list | jq '.members | map({(.id): .name})'
 ```
 
 which will print out a list of Slack User ID + Name pairs.
