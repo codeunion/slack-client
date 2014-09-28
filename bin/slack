@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+require 'slack/cli'
+require 'dotenv'
+
+Dotenv.load(Slack::CLI::CONFIG_FILE)
+
+Slack::CLI::App.start(ARGV)

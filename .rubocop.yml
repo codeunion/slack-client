@@ -1,0 +1,91 @@
+AllCops:
+  Includes:
+    - 'Gemfile'
+    - 'slack-client.gemspec'
+
+# Avoid long parameter lists
+ParameterLists:
+  Max: 5
+  CountKeywordArgs: true
+
+MethodLength:
+  CountComments: false
+  Max: 15
+
+# Avoid more than `Max` levels of nesting.
+BlockNesting:
+  Max: 4
+
+# Align with the style guide.
+CollectionMethods:
+  PreferredMethods:
+    collect:  'map'
+    collect!: 'map!'
+    inject:   'reduce'
+    detect:   'find'
+    find_all: 'select'
+
+# Limit line length
+LineLength:
+  Enabled: true
+
+# Disable documentation checking until a class needs to be documented once
+Documentation:
+  Enabled: false
+
+# Enforce Ruby 1.8-compatible hash syntax
+HashSyntax:
+  EnforcedStyle: ruby19
+
+# No spaces inside hash literals
+SpaceInsideHashLiteralBraces:
+  EnforcedStyle: space
+  EnforcedStyleForEmptyBraces: no_space
+
+# Allow dots at the end of lines
+DotPosition:
+  Enabled: false
+
+# Don't require magic comment at the top of every file
+Encoding:
+  Enabled: false
+
+# Enforce outdenting of access modifiers (i.e. public, private, protected)
+AccessModifierIndentation:
+  EnforcedStyle: indent
+
+EmptyLinesAroundAccessModifier:
+  Enabled: true
+
+# Align ends correctly
+EndAlignment:
+  AlignWith: variable
+
+AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+
+# Indentation of when/else
+CaseIndentation:
+  IndentWhenRelativeTo: end
+  IndentOneStep: false
+
+DoubleNegation:
+  Enabled: false
+
+PercentLiteralDelimiters:
+  PreferredDelimiters:
+    '%':  '{}'
+    '%i': '{}'
+    '%q': '{}'
+    '%Q': '{}'
+    '%r': '{}'
+    '%s': '{}'
+    '%w': '[]'
+    '%W': '[]'
+    '%x': '{}'
+
+RegexpLiteral:
+  MaxSlashes: 0
+
+StringLiterals:
+  EnforcedStyle: single_quotes
