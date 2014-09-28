@@ -26,6 +26,8 @@ $ gem install slack-client
 ## Usage (API Client)
 
 ```ruby
+require 'slack/client'
+
 SLACK_API_TOKEN="<your Slack API token goes here>"
 
 client = Slack::Client.new(token: SLACK_API_TOKEN)
